@@ -14,18 +14,28 @@ export default function PriceContainer() {
     const [isYearly, setIsYearly] = useState<boolean>(false);
 
     return (
-        <div className="bg-white sm:w-full lg:w-[500px] rounded-lg relative sm:top-48 lg:top-44 shadow-2xl">
-            <div className="px-8 py-8 lg:p-12 flex flex-col sm:gap-4 border-b-[2px] border-b-neutral-lighter-grayish-blue ">
+        <div
+            className="bg-white dark:bg-dark-neutral-dark-grayish-blue sm:w-full lg:w-[500px] rounded-lg relative sm:top-48 lg:top-44 shadow-2xl">
+            <div
+                className="px-8 py-8 lg:p-12 flex flex-col sm:gap-4 border-b-[2px] border-b-neutral-lighter-grayish-blue dark:border-b-dark-neutral-darker-grayish-blue ">
                 <div className="w-full flex lg:justify-between sm:justify-center lg:items-center">
-                    <p className="text-center uppercase text-neutral-grayish-blue text-xs font-black tracking-widest ">100k pageviews</p>
-                    <PriceTag price={price} isYearly={isYearly} className="sm:hidden lg:flex justify-end" />
+                    <p className="text-center uppercase dark:text-dark-neutral-medium-grayish-blue text-neutral-grayish-blue text-xs font-black tracking-widest ">100k
+                        pageviews</p>
+                    <PriceTag price={price} isYearly={isYearly} className="sm:hidden lg:flex justify-end"/>
                 </div>
-                <Slider value={[price]} onValueChange={(v) => setPrice(v.at(0) ?? 0)} min={16} max={80} step={5} />
+
+                <Slider
+                    value={[price]}
+                    onValueChange={(v) => setPrice(v.at(0) ?? 0)}
+                    min={16}
+                    max={80}
+                    step={5}
+                />
                 <PriceTag price={price} isYearly={isYearly} className="mt-8 lg:hidden w-full "/>
 
                 <div className="w-full lg:mt-10 sm:mt-4 flex sm:justify-around lg:justify-end items-center gap-2 ">
                     <p className="text-neutral-grayish-blue font-semibold text-xs text-nowrap">Monthly Billing</p>
-                    <Switch defaultChecked={isYearly} onCheckedChange={() => setIsYearly(!isYearly)} />
+                    <Switch defaultChecked={isYearly} onCheckedChange={() => setIsYearly(!isYearly)}/>
                     <p className="text-neutral-grayish-blue font-semibold text-xs text-nowrap">Yearly Billing</p>
                     <Chip text="-25%" className="lg:hidden"/>
                     <Chip text="25% discount" className="sm:hidden lg:block"/>

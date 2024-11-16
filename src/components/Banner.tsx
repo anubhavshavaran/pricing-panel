@@ -11,10 +11,10 @@ export default function Banner() {
                 className="absolute top-0 sm:w-[150px] sm:h-[150px] lg:w-[130px] lg:h-[130px]"
             />
             <div className="absolute top-8 flex flex-col items-center justify-center">
-                <p className="mb-3 text-2xl font-black text-neutral-dark-desaturated-blue">Simple, traffic-based pricing</p>
+                <p className="mb-3 text-2xl text-center font-black text-neutral-dark-desaturated-blue dark:text-white">Simple, traffic-based pricing</p>
                 <div className="flex sm:flex-col lg:flex-row gap-2 items-center">
-                    <p className="font-bold text-[13px] text-neutral-grayish-blue ">Sign-up for our 30-day trial.</p>
-                    <p className="font-bold text-[13px] text-neutral-grayish-blue ">No credit card required.</p>
+                    <p className="font-bold text-[13px] text-neutral-grayish-blue dark:text-white">Sign-up for our 30-day trial.</p>
+                    <p className="font-bold text-[13px] text-neutral-grayish-blue dark:text-white">No credit card required.</p>
                 </div>
             </div>
         </div>

@@ -10,7 +10,8 @@ export default {
     theme: {
         extend: {
             boxShadow: {
-                'slider': '0px 10px 25px 10px hsl(174, 77%, 80%)'
+                'slider': '0px 18px 35px 10px hsl(174, 77%, 80%)',
+                'dark-slider': '0px 18px 35px 10px hsl(175,74%,30%)'
             },
             colors: {
                 primary: {
@@ -28,6 +29,22 @@ export default {
                     'light-grayish-blue': 'hsl(223, 50%, 87%)',
                     'grayish-blue': 'hsl(225, 20%, 60%)',
                     'dark-desaturated-blue': 'hsl(227, 35%, 25%)'
+                },
+                dark: {
+                    primary: {
+                        'soft-cyan-dark': 'hsl(175,74%,30%)',
+                        'strong-cyan-dark': 'hsl(174,84%,43%)',
+                        'light-grayish-red-dark': 'hsl(13,83%,44%)',
+                        'light-red-dark': 'hsl(15, 100%, 30%)',
+                        'pale-blue-dark': 'hsl(226, 100%, 20%)'
+                    },
+                    neutral: {
+                        'very-dark-blue': 'hsl(230, 30%, 10%)',
+                        'darker-grayish-blue': 'hsl(224, 30%, 20%)',
+                        'dark-grayish-blue': 'hsl(223, 30%, 30%)',
+                        'medium-grayish-blue': 'hsl(225, 20%, 60%)',
+                        'light-desaturated-blue': 'hsl(227, 35%, 75%)'
+                    }
                 },
                 background: 'hsl(var(--background))',
                 foreground: 'hsl(var(--foreground))',
@@ -67,8 +84,8 @@ export default {
                 }
             },
             screens: {
-                sm: '375px',
-                lg: '1440px'
+                sm: '300px',
+                lg: '600px'
             },
             borderRadius: {
                 lg: 'var(--radius)',
